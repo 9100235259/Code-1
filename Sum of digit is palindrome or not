@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        int newNum = 0;
+        while (n) {
+            newNum += n % 10;
+            n /= 10;
+        }
+        int reversedNewNum = 0;
+        n = newNum;
+        while (n) {
+            reversedNewNum = (reversedNewNum * 10) + (n % 10);
+            n /= 10;
+        }
+        return reversedNewNum == newNum;
+    }
+};
