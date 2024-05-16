@@ -1,0 +1,7 @@
+class Solution{
+  public:
+  int findNthterm( int N){
+  int ans = (N*(N+1))/2;   
+        return ans;
+    }
+  };
